@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuid01's site</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-frame">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">uuid01@home: ~</div>
+        </div>
+        <div class="terminal-body">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-link active">~/home</a>
+                <a href="./projects.html" class="nav-link">~/projects</a>
+                <a href="./life.html" class="nav-link">~/life</a>
+            </nav>
+
+            <main class="hero-section">
+                <div class="hero-content">
+                    <div class="typing-effect">
+                        <span class="prompt">$</span>
+                        <span class="typing-text" id="hero-typing"></span>
+                        <span class="cursor">|</span>
+                    </div>
+
+                    <div class="profile-info">
+                        <h1 class="username">uuid01</h1>
+                        <p class="location">
+                            <span class="icon">📍</span>
+                            杭州
+                        </p>
+                        <p class="title">AI 大模型工程师</p>
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">LLM</span>
+                        <span class="tag">AI Infrastructure</span>
+                        <span class="tag">Ascend</span>
+                        <span class="tag">Model Deployment</span>
+                    </div>
+
+                    <p class="bio">
+                        专注于大模型训练与推理优化，熟悉主流 AI 技术栈，
+                        熟悉华为昇腾（Ascend）服务器相关技术开发。
+                    </p>
+
+                    <div class="hero-decoration">
+                        <div class="code-line"><span class="comment">// Welcome to my digital garden</span></div>
+                        <div class="code-line"><span class="keyword">const</span> <span class="variable">engineer</span> = {</div>
+                        <div class="code-line">  <span class="variable">name</span>: <span class="string">"uuid01"</span>,</div>
+                        <div class="code-line">  <span class="variable">focus</span>: [<span class="string">"LLM"</span>, <span class="string">"Training"</span>, <span class="string">"Inference"</span>],</div>
+                        <div class="code-line">  <span class="variable">location</span>: <span class="string">"Hangzhou"</span>,</div>
+                        <div class="code-line">  <span class="variable">status</span>: <span class="string">"building amazing things"</span></div>
+                        <div class="code-line">};</div>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">20+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100+</span>
+                            <span class="stat-label">Commits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-cards">
+                    <a href="./projects.html" class="nav-card">
+                        <div class="card-icon">📂</div>
+                        <div class="card-content">
+                            <h3>最近项目</h3>
+                            <p>查看我的技术项目</p>
+                        </div>
+                        <div class="card-arrow">→</div>
+                    </a>
+                    <a href="./life.html" class="nav-card">
+                        <div class="card-icon">📝</div>
+                        <div class="card-content">
+                            <h3>生活点滴</h3>
+                            <p>学习记录与日常思考</p>
+                        </div>
+                        <div class="card-arrow">→</div>
+                    </a>
+                </div>
+            </main>
+
+            <footer class="contact-section">
+                <h2 class="section-title">
+                    <span class="prompt">$</span> contact --help
+                </h2>
+                <div class="contact-links">
+                    <a href="https://github.com/uuid01" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:hello@uuid01.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="contact-icon">💬</span>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 uuid01. Built with &lt;3 and code.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

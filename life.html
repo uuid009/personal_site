@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuid01's site</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-frame">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">uuid01@home: ~/life</div>
+        </div>
+        <div class="terminal-body">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-link">~/home</a>
+                <a href="./projects.html" class="nav-link">~/projects</a>
+                <a href="./life.html" class="nav-link active">~/life</a>
+            </nav>
+
+            <main class="life-section">
+                <div class="page-header">
+                    <h1 class="page-title">
+                        <span class="prompt">$</span> cat ./life/diary.md
+                    </h1>
+                    <p class="page-subtitle">生活点滴 · 学习记录</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-02-28</span>
+                                <a href="./life.html?tag=技术学习" class="timeline-tag tag-learning">技术学习</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=1">深入理解 Transformer 注意力机制</a>
+                            </h3>
+                            <p class="timeline-text">
+                                最近重新阅读了 "Attention Is All You Need" 论文，对 Multi-Head Attention
+                                有了更深的理解。特别是关于 Query、Key、Value 的计算方式，以及如何通过
+                                矩阵运算实现并行计算，收获颇丰。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#transformer #attention #paper</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-02-20</span>
+                                <a href="./life.html?tag=读书" class="timeline-tag tag-reading">读书</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=2">《Designing Data-Intensive Applications》阅读笔记</a>
+                            </h3>
+                            <p class="timeline-text">
+                                这本书真的非常棒！刚读完第一部分，对分布式系统有了系统的认知。
+                                特别是关于数据复制、分区的那几章，讲解得非常清晰。
+                                强烈推荐给做后端和基础设施的同学们。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#book #ddia #distributed-systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-02-15</span>
+                                <a href="./life.html?tag=日常思考" class="timeline-tag tag-thought">日常思考</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=3">关于 AI 工程师的职业思考</a>
+                            </h3>
+                            <p class="timeline-text">
+                                最近在思考 AI 工程师的核心竞争力是什么？我觉得除了对模型的理解之外，
+                                更重要的是工程能力：如何高效地训练、部署、优化模型，如何构建
+                                可靠的 AI 系统。这需要大量的实践经验积累。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#thoughts #career #ai-engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-02-10</span>
+                                <a href="./life.html?tag=技术学习" class="timeline-tag tag-learning">技术学习</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=4">华为昇腾 Atlas 训练实战</a>
+                            </h3>
+                            <p class="timeline-text">
+                                开始学习华为昇腾系列服务器的使用。搭建了本地的开发环境，
+                                跑了几个官方的 Demo。NPU 的编程接口和 CUDA 有些不同，
+                                需要时间适应。不过性能确实不错，期待后续的深入研究。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#ascend #npu #huawei</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-02-01</span>
+                                <a href="./life.html?tag=日常思考" class="timeline-tag tag-thought">日常思考</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=5">新的一年，新的开始</a>
+                            </h3>
+                            <p class="timeline-text">
+                                2026 年到了！回顾过去一年的学习和工作，感觉自己成长了不少。
+                                今年的目标：深入理解大模型推理优化，多参与开源项目，
+                                希望能在这个领域有更大的突破。也希望能保持每周更新的习惯，
+                                记录学习和生活中的点点滴滴。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#new-year #goals #2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2026-01-20</span>
+                                <a href="./life.html?tag=读书" class="timeline-tag tag-reading">读书</a>
+                            </div>
+                            <h3 class="timeline-title">
+                                <a href="./life-detail.html?id=6">《机器学习导论》重温</a>
+                            </h3>
+                            <p class="timeline-text">
+                                重温了一些经典的机器学习算法，包括 SVM、随机森林、GBDT 等。
+                                虽然现在大家都在讨论深度学习，但这些基础算法仍然非常重要。
+                                很多问题的解决方案往往只需要简单的模型加上合适的特征工程。
+                            </p>
+                            <div class="timeline-footer">
+                                <span class="read-more">#book #ml #fundamentals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="contact-section">
+                <h2 class="section-title">
+                    <span class="prompt">$</span> contact --help
+                </h2>
+                <div class="contact-links">
+                    <a href="https://github.com/uuid01" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:hello@uuid01.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="contact-icon">💬</span>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 uuid01. Built with &lt;3 and code.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

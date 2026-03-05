@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uuid01's site</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-frame">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn-close"></span>
+                <span class="btn-minimize"></span>
+                <span class="btn-maximize"></span>
+            </div>
+            <div class="terminal-title">uuid01@home: ~/life/detail</div>
+        </div>
+        <div class="terminal-body">
+            <nav class="nav-bar">
+                <a href="./index.html" class="nav-link">~/home</a>
+                <a href="./projects.html" class="nav-link">~/projects</a>
+                <a href="./life.html" class="nav-link active">~/life</a>
+            </nav>
+
+            <main class="detail-section" id="detail-content">
+                <!-- Content will be loaded here -->
+            </main>
+
+            <div class="back-section">
+                <a href="./life.html" class="back-link">
+                    <span class="back-arrow">←</span>
+                    <span>返回生活点滴</span>
+                </a>
+            </div>
+
+            <footer class="contact-section">
+                <h2 class="section-title">
+                    <span class="prompt">$</span> contact --help
+                </h2>
+                <div class="contact-links">
+                    <a href="https://github.com/uuid01" target="_blank" class="contact-link">
+                        <span class="contact-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="mailto:hello@uuid01.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="#" class="contact-link">
+                        <span class="contact-icon">💬</span>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 uuid01. Built with &lt;3 and code.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        var lifeData = {
+            '1': {
+                title: '深入理解 Transformer 注意力机制',
+                date: '2026-02-28',
+                tags: ['技术学习', 'transformer', 'attention', 'paper'],
+                tagType: 'tag-learning',
+                content: '<p>最近重新阅读了 "Attention Is All You Need" 论文，对 Multi-Head Attention 有了更深的理解。特别是关于 Query、Key、Value 的计算方式，以及如何通过矩阵运算实现并行计算，收获颇丰。</p><h4>核心理解</h4><p>Transformer 的核心在于 Self-Attention 机制。每一个 token 都可以关注到序列中的所有其他 token，这使得模型能够捕获长距离依赖关系。</p><pre><code>Attention(Q, K, V) = softmax(QK^T / sqrt(d_k))V</code></pre><h4>Multi-Head 的优势</h4><p>多头注意力允许模型同时关注不同位置的不同表示子空间的信息。每个 head 可以学习到不同的注意力模式。</p><h4>实践感悟</h4><p>在实际项目中，我发现对注意力权重的可视化对于调试模型非常有帮助。</p>'
+            },
+            '2': {
+                title: '《Designing Data-Intensive Applications》阅读笔记',
+                date: '2026-02-20',
+                tags: ['读书', 'ddia', 'distributed-systems'],
+                tagType: 'tag-reading',
+                content: '<p>这本书真的非常棒！刚读完第一部分，对分布式系统有了系统的认知。特别是关于数据复制、分区的那几章，讲解得非常清晰。强烈推荐给做后端和基础设施的同学们。</p><h4>核心概念</h4><p>数据系统设计的三大支柱：可靠性、可扩展性、可维护性。一个好的数据系统需要在这三者之间取得平衡。</p><h4>数据模型与查询语言</h4><p>从关系型数据库到文档数据库，不同的数据模型适合不同的场景。关键是要理解每种模型的优缺点。</p><h4>分布式系统挑战</h4><p>CAP 定理告诉我们：一致性、可用性、分区容错性只能同时满足两个。在实际系统中，我们通常需要在强一致性和最终一致性之间做选择。</p>'
+            },
+            '3': {
+                title: '关于 AI 工程师的职业思考',
+                date: '2026-02-15',
+                tags: ['日常思考', 'thoughts', 'career', 'ai-engineer'],
+                tagType: 'tag-thought',
+                content: '<p>最近在思考 AI 工程师的核心竞争力是什么？我觉得除了对模型的理解之外，更重要的是工程能力：如何高效地训练、部署、优化模型，如何构建可靠的 AI 系统。这需要大量的实践经验积累。</p><h4>技术深度 vs 广度</h4><p>作为一个 AI 工程师，我觉得需要在某个领域有足够深的积累，比如模型优化、分布式训练、推理部署等。</p><h4>工程能力的重要性</h4><p>很多看似简单的问题，在实际生产环境中会变得非常复杂。比如：如何处理大规模数据的 IO 问题，如何在有限的显存下训练大模型，如何保证推理的实时性和稳定性。</p>'
+            },
+            '4': {
+                title: '华为昇腾 Atlas 训练实战',
+                date: '2026-02-10',
+                tags: ['技术学习', 'ascend', 'npu', 'huawei'],
+                tagType: 'tag-learning',
+                content: '<p>开始学习华为昇腾系列服务器的使用。搭建了本地的开发环境，跑了几个官方的 Demo。NPU 的编程接口和 CUDA 有些不同，需要时间适应。不过性能确实不错，期待后续的深入研究。</p><h4>环境搭建</h4><p>昇腾服务器的环境配置相对复杂，需要安装 CANN 驱动、MindSpore 或其他适配的深度学习框架、各种依赖库。</p><h4>编程接口</h4><p>昇腾 NPU 使用 ACL（Atlas Command List）接口，与 CUDA 的编程模型有些不同。</p><h4>性能体验</h4><p>在实际的训练任务中，昇腾的性能表现相当不错。特别是在大模型场景下，有专门的优化。</p>'
+            },
+            '5': {
+                title: '新的一年，新的开始',
+                date: '2026-02-01',
+                tags: ['日常思考', 'new-year', 'goals', '2026'],
+                tagType: 'tag-thought',
+                content: '<p>2026 年到了！回顾过去一年的学习和工作，感觉自己成长了不少。今年的目标：深入理解大模型推理优化，多参与开源项目，希望能在这个领域有更大的突破。</p><h4>2025 回顾</h4><p>过去一年，主要完成了：深入学习了 Transformer 架构，参与了公司的大模型训练项目，开始研究模型推理优化。</p><h4>2026 目标</h4><p>新的一年，希望在以下几个方面有所突破：深入理解大模型推理优化技术，多参与开源项目贡献代码，学习更多关于 AI 基础设施的知识，保持每周更新的习惯。</p>'
+            },
+            '6': {
+                title: '《机器学习导论》重温',
+                date: '2026-01-20',
+                tags: ['读书', 'book', 'ml', 'fundamentals'],
+                tagType: 'tag-reading',
+                content: '<p>重温了一些经典的机器学习算法，包括 SVM、随机森林、GBDT 等。虽然现在大家都在讨论深度学习，但这些基础算法仍然非常重要。很多问题的解决方案往往只需要简单的模型加上合适的特征工程。</p><h4>SVM 的魅力</h4><p>支持向量机是一个优雅的算法。它的核心思想是找到能够最大化间隔的超平面。</p><h4>集成学习的智慧</h4><p>随机森林和 GBDT 展示了"三个臭皮匠顶个诸葛亮"的道理。通过集成多个弱分类器，可以获得强大的预测能力。</p><h4>特征工程</h4><p>在实际的机器学习项目中，我发现特征工程往往比模型选择更重要。好的特征可以让简单的模型获得很好的效果。</p>'
+            }
+        };
+
+        function getQueryParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        function loadDetail() {
+            var id = getQueryParam('id');
+            var content = document.getElementById('detail-content');
+
+            // If no ID, show all articles list
+            if (!id) {
+                var allArticlesHtml = '<div class="all-articles"><h2>所有文章</h2><ul>';
+                for (var key in lifeData) {
+                    if (lifeData.hasOwnProperty(key)) {
+                        var item = lifeData[key];
+                        allArticlesHtml += '<li><a href="./life-detail.html?id=' + key + '">' + item.date + ' - ' + item.title + '</a></li>';
+                    }
+                }
+                allArticlesHtml += '</ul></div>';
+                content.innerHTML = allArticlesHtml;
+                return;
+            }
+
+            if (!lifeData[id]) {
+                content.innerHTML = '<div class="detail-error"><p>文章不存在或已被删除</p><a href="./life.html" class="back-link"><span class="back-arrow">←</span><span>返回生活点滴</span></a></div>';
+                return;
+            }
+
+            var data = lifeData[id];
+            var tagsHtml = '';
+            for (var i = 0; i < data.tags.length; i++) {
+                tagsHtml += '<a href="./life.html?tag=' + encodeURIComponent(data.tags[i]) + '" class="timeline-tag ' + data.tagType + '">#' + data.tags[i] + '</a>';
+            }
+
+            var articleHtml = '<article class="detail-article"><header class="detail-header"><div class="detail-meta"><span class="detail-date">' + data.date + '</span><div class="detail-tags">' + tagsHtml + '</div></div><h1 class="detail-title">' + data.title + '</h1></header><div class="detail-body">' + data.content + '</div><div class="detail-ascii"><pre>   ┌─────────────────────────────────────┐\n   │  EOF - End of File                  │\n   └─────────────────────────────────────┘</pre></div></article>';
+
+            content.innerHTML = articleHtml;
+        }
+
+        // Execute immediately
+        loadDetail();
+    </script>
+</body>
+</html>
