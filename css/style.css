@@ -430,6 +430,7 @@ a:hover {
     gap: 8px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-link {
@@ -459,7 +460,7 @@ a:hover {
 /* ==================== Hero Section ==================== */
 .hero-section {
     text-align: center;
-    padding: 60px 0;
+    padding: 30px 0;
 }
 
 .typing-effect {
@@ -486,36 +487,53 @@ a:hover {
 }
 
 .profile-info {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .username {
     font-family: var(--font-mono);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 8px;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-align: center;
 }
 
 .location {
     font-family: var(--font-mono);
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .location .icon {
-    margin-right: 4px;
+    margin-right: 0;
+}
+
+.location .city-name {
+    color: var(--accent-warning);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(210, 153, 34, 0.4);
+    letter-spacing: 2px;
 }
 
 .title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--accent-cyan);
     font-weight: 500;
+    padding: 6px 16px;
+    background: rgba(57, 197, 207, 0.1);
+    border: 1px solid rgba(57, 197, 207, 0.3);
+    border-radius: 20px;
 }
 
 .tags {
@@ -702,8 +720,10 @@ a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -941,6 +961,19 @@ a:hover {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .profile-info {
+        gap: 12px;
+    }
+
+    .username {
+        font-size: 2.2rem;
+    }
+
+    .title {
+        font-size: 1rem;
     }
 
     .timeline {
