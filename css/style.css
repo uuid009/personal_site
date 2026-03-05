@@ -152,6 +152,532 @@ a:hover {
     50% { opacity: 1; transform: scale(1.5); }
 }
 
+/* Solar System */
+.solar-system {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    transform: scale(0.5);
+    width: 300px;
+    height: 300px;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background:
+        radial-gradient(circle at 30% 30%, #fff9c4 0%, #ffeb3b 30%, #ff9800 70%, #ff5722 100%);
+    border-radius: 50%;
+    box-shadow:
+        0 0 20px #ffeb3b,
+        0 0 40px #ff9800,
+        0 0 60px rgba(255, 152, 0, 0.5);
+    animation: sunPulse 4s infinite ease-in-out;
+}
+
+@keyframes sunPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 20px #ffeb3b,
+            0 0 40px #ff9800,
+            0 0 60px rgba(255, 152, 0, 0.5);
+    }
+    50% {
+        box-shadow:
+            0 0 30px #ffeb3b,
+            0 0 60px #ff9800,
+            0 0 90px rgba(255, 152, 0, 0.7);
+    }
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-1 {
+    width: 80px;
+    height: 80px;
+    animation: rotate 8s linear infinite;
+}
+
+.orbit-2 {
+    width: 130px;
+    height: 130px;
+    animation: rotate 12s linear infinite;
+    animation-direction: reverse;
+}
+
+.orbit-3 {
+    width: 180px;
+    height: 180px;
+    animation: rotate 18s linear infinite;
+}
+
+.orbit-4 {
+    width: 240px;
+    height: 240px;
+    animation: rotate 25s linear infinite;
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.planet-orbiting {
+    position: absolute;
+    border-radius: 50%;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mercury */
+.mercury {
+    width: 10px;
+    height: 10px;
+    background:
+        linear-gradient(135deg, #9e9e9e 0%, #616161 50%, #424242 100%);
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Venus */
+.venus {
+    width: 14px;
+    height: 14px;
+    background:
+        linear-gradient(135deg, #ffe082 0%, #ffca28 50%, #ff8f00 100%);
+    box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Earth */
+.earth {
+    width: 16px;
+    height: 16px;
+    background:
+        radial-gradient(circle at 30% 30%, #4fc3f7 0%, #2196f3 40%, #1565c0 80%, #0d47a1 100%);
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.earth::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+/* Mars */
+.mars {
+    width: 12px;
+    height: 12px;
+    background:
+        linear-gradient(135deg, #ef9a9a 0%, #e53935 50%, #b71c1c 100%);
+    box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Pixel Rocket - Enhanced */
+.pixel-rocket {
+    position: absolute;
+    width: 24px;
+    height: 36px;
+    z-index: 1;
+}
+
+/* Rocket nose cone */
+.pixel-rocket::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 16px solid #e74c3c;
+}
+
+/* Rocket body with window */
+.pixel-rocket::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 16px;
+    background:
+        linear-gradient(180deg, #ecf0f1 0%, #bdc3c7 100%);
+    border-radius: 2px;
+    box-shadow: inset 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Rocket window */
+.pixel-rocket .rocket-window {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle at 30% 30%, #81d4fa 0%, #29b6f6 50%, #0288d1 100%);
+    border-radius: 50%;
+    border: 2px solid #7f8c8d;
+    box-shadow: 0 0 6px rgba(41, 182, 246, 0.5);
+    z-index: 2;
+}
+
+/* Rocket fins */
+.pixel-rocket .rocket-fin-left,
+.pixel-rocket .rocket-fin-right {
+    position: absolute;
+    top: 22px;
+    width: 6px;
+    height: 12px;
+    background: linear-gradient(180deg, #c0392b 0%, #e74c3c 100%);
+    z-index: 0;
+}
+
+.pixel-rocket .rocket-fin-left {
+    left: 1px;
+    border-radius: 2px 0 2px 2px;
+    transform: skewY(20deg);
+}
+
+.pixel-rocket .rocket-fin-right {
+    right: 1px;
+    border-radius: 0 2px 2px 2px;
+    transform: skewY(-20deg);
+}
+
+/* Rocket variants with different colors */
+.pixel-rocket.rocket-blue::before {
+    border-bottom-color: #3498db;
+}
+
+.pixel-rocket.rocket-blue::after {
+    background: linear-gradient(180deg, #ecf0f1 0%, #95a5a6 100%);
+}
+
+.pixel-rocket.rocket-blue .rocket-fin-left,
+.pixel-rocket.rocket-blue .rocket-fin-right {
+    background: linear-gradient(180deg, #2980b9 0%, #3498db 100%);
+}
+
+.pixel-rocket.rocket-green::before {
+    border-bottom-color: #27ae60;
+}
+
+.pixel-rocket.rocket-green::after {
+    background: linear-gradient(180deg, #ecf0f1 0%, #7f8c8d 100%);
+}
+
+.pixel-rocket.rocket-green .rocket-fin-left,
+.pixel-rocket.rocket-green .rocket-fin-right {
+    background: linear-gradient(180deg, #1e8449 0%, #27ae60 100%);
+}
+
+.rocket-1 {
+    bottom: -50px;
+    left: 10%;
+    top: auto;
+    animation: rocketFlyUp1 8s infinite linear;
+}
+
+.rocket-2 {
+    bottom: -50px;
+    right: 15%;
+    left: auto;
+    top: auto;
+    animation: rocketFlyUp2 10s infinite linear;
+    animation-delay: -4s;
+}
+
+.rocket-3 {
+    bottom: -50px;
+    left: 40%;
+    top: auto;
+    animation: rocketFlyUp3 12s infinite linear;
+    animation-delay: -7s;
+}
+
+@keyframes rocketFly1 {
+    0% {
+        bottom: -50px;
+        left: 10%;
+        transform: rotate(-5deg);
+    }
+    25% {
+        left: 15%;
+    }
+    50% {
+        left: 8%;
+    }
+    75% {
+        left: 13%;
+    }
+    100% {
+        bottom: 120%;
+        left: 10%;
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes rocketFly2 {
+    0% {
+        bottom: -50px;
+        right: 15%;
+        transform: rotate(5deg);
+    }
+    25% {
+        right: 18%;
+    }
+    50% {
+        right: 12%;
+    }
+    75% {
+        right: 16%;
+    }
+    100% {
+        bottom: 120%;
+        right: 15%;
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes rocketFly3 {
+    0% {
+        bottom: -50px;
+        left: 40%;
+        transform: rotate(-3deg);
+    }
+    25% {
+        left: 45%;
+    }
+    50% {
+        left: 37%;
+    }
+    75% {
+        left: 42%;
+    }
+    100% {
+        bottom: 120%;
+        left: 40%;
+        transform: rotate(-3deg);
+    }
+}
+
+/* Rocket Exhaust - Enhanced */
+.rocket-exhaust {
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 20px;
+    background: linear-gradient(180deg, #ff5722 0%, #ff9800 40%, #ffeb3b 70%, transparent 100%);
+    border-radius: 0 0 50% 50%;
+    animation: exhaustFlicker 0.1s infinite;
+    z-index: -1;
+}
+
+.rocket-exhaust::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 12px;
+    background: linear-gradient(180deg, #ff8a65 0%, #ffab91 60%, transparent 100%);
+    border-radius: 0 0 50% 50%;
+    animation: exhaustInner 0.15s infinite;
+}
+
+@keyframes exhaustFlicker {
+    0%, 100% {
+        height: 20px;
+        opacity: 0.95;
+    }
+    50% {
+        height: 28px;
+        opacity: 1;
+    }
+}
+
+@keyframes exhaustInner {
+    0%, 100% {
+        height: 12px;
+        opacity: 0.8;
+    }
+    50% {
+        height: 18px;
+        opacity: 1;
+    }
+}
+
+/* Blue Comet */
+.pixel-comet {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #58a6ff, 0 0 20px #58a6ff, 0 0 40px #58a6ff;
+    z-index: 1;
+}
+
+.pixel-comet::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(88, 166, 255, 0.8), rgba(88, 166, 255, 0.3), transparent);
+    animation: cometTail 0.5s infinite;
+}
+
+.pixel-comet::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(163, 113, 247, 0.6), rgba(163, 113, 247, 0.2), transparent);
+    animation: cometTail 0.7s infinite reverse;
+}
+
+.comet-1 {
+    top: 15%;
+    left: -20px;
+    animation: cometFly1 12s infinite ease-in;
+    animation-delay: 0s;
+}
+
+.comet-2 {
+    top: 50%;
+    left: -20px;
+    animation: cometFly2 15s infinite ease-in;
+    animation-delay: -5s;
+}
+
+.comet-3 {
+    top: 80%;
+    left: -20px;
+    animation: cometFly3 10s infinite ease-in;
+    animation-delay: -8s;
+}
+
+@keyframes cometTail {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes cometFly1 {
+    0% {
+        left: -20px;
+        top: 15%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        left: 30%;
+        top: 20%;
+    }
+    60% {
+        left: 60%;
+        top: 12%;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: 120%;
+        top: 18%;
+        opacity: 0;
+    }
+}
+
+@keyframes cometFly2 {
+    0% {
+        left: -20px;
+        top: 50%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        left: 35%;
+        top: 45%;
+    }
+    60% {
+        left: 65%;
+        top: 55%;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: 120%;
+        top: 48%;
+        opacity: 0;
+    }
+}
+
+@keyframes cometFly3 {
+    0% {
+        left: -20px;
+        top: 80%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    30% {
+        left: 25%;
+        top: 75%;
+    }
+    60% {
+        left: 55%;
+        top: 85%;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: 120%;
+        top: 78%;
+        opacity: 0;
+    }
+}
+
 /* Pixel Death Star */
 .pixel-death-star {
     position: absolute;
