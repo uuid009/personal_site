@@ -1,3 +1,53 @@
+// ==================== UFO Easter Egg ====================
+const spaceMessages = [
+    '正在进行星际穿越...',
+    '正在穿越虫洞中...',
+    '正在寻找下一个星球...',
+    '曲速引擎已启动...',
+    '正在与外星文明建立联系...',
+    '正在收集星际数据...',
+    '导航系统校准中...',
+    '正在跃迁至平行宇宙...',
+    '能量护盾已激活...',
+    '正在解析脉冲信号...',
+    '目标: 未知星系...',
+    '正在绕过小行星带...',
+    '与母船通信中...',
+    '正在扫描生命迹象...',
+    '时空坐标已锁定...',
+    '正在进入光速飞行...',
+    '量子纠缠同步中...',
+    '正在卸载星际货物...',
+    '你有看到我在红色星球上的朋友吗...'
+];
+
+function showUFOMessage() {
+    console.log('UFO clicked!');
+    const messageEl = document.getElementById('ufoMessage');
+    if (!messageEl) return;
+
+    const randomIndex = Math.floor(Math.random() * spaceMessages.length);
+    const message = spaceMessages[randomIndex];
+    console.log('Showing message:', message);
+    messageEl.innerHTML = `<span class="message-text">${message}</span>`;
+    messageEl.classList.add('show');
+
+    setTimeout(() => {
+        messageEl.classList.remove('show');
+    }, 2500);
+}
+
+function initUFOClick() {
+    const ufo = document.getElementById('ufo1');
+    console.log('Initializing UFO click, element:', ufo);
+    if (ufo) {
+        ufo.addEventListener('click', showUFOMessage);
+        console.log('UFO click listener added');
+    } else {
+        console.error('UFO element not found!');
+    }
+}
+
 // ==================== Typing Animation ====================
 const typingTexts = [
     'Hello, I\'m uuid01',
@@ -119,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
     setActiveNavLink();
     initScrollAnimations();
+    initUFOClick();
 });
 
 // Handle page visibility change to pause/resume animations
