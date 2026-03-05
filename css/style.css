@@ -97,7 +97,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 a {
@@ -118,7 +118,7 @@ a:hover {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -155,7 +155,7 @@ a:hover {
 /* Pixel Death Star */
 .pixel-death-star {
     position: absolute;
-    top: 8%;
+    top: 15%;
     right: 8%;
     width: 60px;
     height: 60px;
@@ -195,8 +195,8 @@ a:hover {
 }
 
 .planet-1 {
-    bottom: 15%;
-    left: 5%;
+    bottom: 10%;
+    left: 3%;
     width: 40px;
     height: 40px;
     background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #922b21 100%);
@@ -216,8 +216,8 @@ a:hover {
 }
 
 .planet-2 {
-    top: 20%;
-    left: 8%;
+    top: 12%;
+    left: 3%;
     width: 25px;
     height: 25px;
     background: linear-gradient(135deg, #3498db 0%, #2980b9 50%, #1a5276 100%);
@@ -233,7 +233,7 @@ a:hover {
 /* X-Wing */
 .x-wing {
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: -100px;
     width: 80px;
     height: 20px;
@@ -274,7 +274,7 @@ a:hover {
 /* TIE Fighter */
 .tie-fighter {
     position: absolute;
-    top: 60%;
+    top: 85%;
     right: -80px;
     width: 40px;
     height: 40px;
@@ -329,7 +329,7 @@ a:hover {
 /* Laser Shot */
 .laser-shot {
     position: absolute;
-    top: 45%;
+    top: 15%;
     left: -50px;
     width: 30px;
     height: 3px;
@@ -342,7 +342,7 @@ a:hover {
 }
 
 .laser-shot.laser-green {
-    top: 55%;
+    top: 90%;
     animation-delay: -8s;
     background: linear-gradient(90deg, transparent, #2ecc71, #27ae60);
     box-shadow: 0 0 10px #2ecc71, 0 0 20px #2ecc71;
@@ -421,14 +421,14 @@ a:hover {
 }
 
 .terminal-body {
-    padding: 24px;
+    padding: 32px;
 }
 
 /* ==================== Navigation ==================== */
 .nav-bar {
     display: flex;
     gap: 8px;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
@@ -459,14 +459,14 @@ a:hover {
 /* ==================== Hero Section ==================== */
 .hero-section {
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .typing-effect {
     font-family: var(--font-mono);
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     min-height: 30px;
 }
 
@@ -486,7 +486,7 @@ a:hover {
 }
 
 .profile-info {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .username {
@@ -522,8 +522,8 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 24px;
+    gap: 12px;
+    margin-bottom: 32px;
 }
 
 .tag {
@@ -554,8 +554,8 @@ a:hover {
 .nav-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    margin-top: 48px;
+    gap: 20px;
+    margin-top: 60px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -564,8 +564,8 @@ a:hover {
 .nav-card {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 20px;
+    gap: 20px;
+    padding: 24px;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -614,7 +614,7 @@ a:hover {
 /* ==================== Contact Section ==================== */
 .contact-section {
     margin-top: 60px;
-    padding-top: 40px;
+    padding-top: 50px;
     border-top: 1px solid var(--border-color);
 }
 
@@ -634,8 +634,8 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 32px;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .contact-link {
@@ -675,7 +675,7 @@ a:hover {
 /* ==================== Page Header ==================== */
 .page-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 .page-title {
@@ -697,20 +697,20 @@ a:hover {
 
 /* ==================== Projects Grid ==================== */
 .projects-section {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 24px;
 }
 
 .project-card {
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    padding: 24px;
+    padding: 28px;
     transition: all 0.3s ease;
 }
 
@@ -757,14 +757,14 @@ a:hover {
     color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .tech-tag {
@@ -778,7 +778,7 @@ a:hover {
 }
 
 .project-footer {
-    padding-top: 16px;
+    padding-top: 20px;
     border-top: 1px solid var(--border-color);
 }
 
@@ -924,11 +924,11 @@ a:hover {
 /* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 15px;
     }
 
     .terminal-body {
-        padding: 16px;
+        padding: 20px;
     }
 
     .username {
@@ -1326,7 +1326,7 @@ a:hover {
 
 .hero-decoration {
     position: relative;
-    margin: 32px 0;
+    margin: 40px 0;
     padding: 20px;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
@@ -1374,8 +1374,8 @@ a:hover {
 .hero-stats {
     display: flex;
     justify-content: center;
-    gap: 32px;
-    margin: 32px 0;
+    gap: 40px;
+    margin: 40px 0;
     padding: 20px;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
